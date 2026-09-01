@@ -484,10 +484,10 @@ body{background:#03050a;color:#f5f7ff}.theme{display:none!important}\n
 
 
 /* OPAL PROJECT CARD — additive only */
-.projectLink{display:block;cursor:pointer;z-index:1;background:linear-gradient(135deg,#07111f,#080d18)!important}
-.projectImage{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;opacity:.58;transition:transform .6s ease,opacity .4s ease,filter .4s ease;filter:saturate(.9) contrast(1.05)}
-.project:has(.projectImage):hover .projectImage{transform:scale(1.045);opacity:.72;filter:saturate(1.05) contrast(1.08)}
-.projectLink:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,4,10,.12) 0%,rgba(2,4,10,.25) 38%,rgba(2,4,10,.96) 100%);pointer-events:none}
+.projectLink{display:block;cursor:pointer;z-index:1;background:linear-gradient(135deg,rgba(7,17,31,.18),rgba(8,13,24,.28)),url('/assets/projects/opal-auto-detailing.png') center top/cover no-repeat!important}
+.projectImage{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center top;opacity:.72;z-index:0;transition:transform .6s ease,opacity .4s ease,filter .4s ease;filter:saturate(.95) contrast(1.05)}
+.project:has(.projectImage):hover .projectImage{transform:scale(1.045);opacity:.84;filter:saturate(1.05) contrast(1.08)}
+.projectLink:after{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(180deg,rgba(2,4,10,.08) 0%,rgba(2,4,10,.24) 38%,rgba(2,4,10,.92) 100%);pointer-events:none}
 .projectBadge{display:inline-flex;width:max-content;padding:6px 9px;border:1px solid #3988ff45;border-radius:99px;color:#70adff;font-size:9px;font-weight:900;letter-spacing:1.5px;margin-bottom:9px;background:#02040a88;backdrop-filter:blur(8px)}
 .projectActions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
 .projectBtn{display:inline-flex!important;align-items:center;padding:8px 11px;border:1px solid #3988ff55;border-radius:8px;background:#3988ff12;color:#a9caff!important;word-break:normal!important;transition:.25s}
