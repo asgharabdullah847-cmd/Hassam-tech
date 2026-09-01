@@ -482,6 +482,18 @@ body{background:#03050a;color:#f5f7ff}.theme{display:none!important}\n
   .reveal{transition:none!important}
 }
 
+
+/* OPAL PROJECT CARD — additive only */
+.projectLink{display:block;cursor:pointer;z-index:1;background:linear-gradient(135deg,#07111f,#080d18)!important}
+.projectImage{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;opacity:.58;transition:transform .6s ease,opacity .4s ease,filter .4s ease;filter:saturate(.9) contrast(1.05)}
+.project:has(.projectImage):hover .projectImage{transform:scale(1.045);opacity:.72;filter:saturate(1.05) contrast(1.08)}
+.projectLink:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,4,10,.12) 0%,rgba(2,4,10,.25) 38%,rgba(2,4,10,.96) 100%);pointer-events:none}
+.projectBadge{display:inline-flex;width:max-content;padding:6px 9px;border:1px solid #3988ff45;border-radius:99px;color:#70adff;font-size:9px;font-weight:900;letter-spacing:1.5px;margin-bottom:9px;background:#02040a88;backdrop-filter:blur(8px)}
+.projectActions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.projectBtn{display:inline-flex!important;align-items:center;padding:8px 11px;border:1px solid #3988ff55;border-radius:8px;background:#3988ff12;color:#a9caff!important;word-break:normal!important;transition:.25s}
+.projectBtn:hover{transform:translateY(-2px);border-color:#3988ff99;background:#3988ff20}
+.secondaryProjectBtn{border-color:#ffffff18;background:#ffffff06;color:#d9deea!important}
+@media(max-width:560px){.project{min-height:350px}.projectImage{object-position:center top}.projectActions{gap:7px}.projectBtn{font-size:10px;padding:8px 10px}}
 </style>
 </head>
 <body>
@@ -516,7 +528,7 @@ body{background:#03050a;color:#f5f7ff}.theme{display:none!important}\n
 </div></div></section>
 
 <section class="section projects" id="projects"><div class="wrap"><div class="head reveal"><div class="kicker">Your Work</div><h2>Projects & Case Studies</h2><p>No fake projects. Add your real GitHub or live project URL below and replace each placeholder card with your actual work.</p></div><div class="grid">
-<div class="project reveal"><div class="projectVisual"></div><div class="projectContent"><h3>ADD YOUR PROJECT</h3><p>Project title + short description</p><div class="projectUrl">https://github.com/your-project</div></div></div>
+<div class="project reveal"><a class="projectVisual projectLink" href="https://opal-auto-detailing.vercel.app/" target="_blank" rel="noopener" aria-label="Open Opal Auto Detailing live website"><img class="projectImage" src="assets/projects/opal-auto-detailing.png" alt="Opal Auto Detailing website preview"></a><div class="projectContent"><div class="projectBadge">WEB DEVELOPMENT</div><h3>Opal Auto Detailing</h3><p>Premium mobile auto detailing website featuring service packages, gallery, reviews, online booking and WhatsApp integration.</p><div class="projectActions"><a class="projectUrl projectBtn" href="https://opal-auto-detailing.vercel.app/" target="_blank" rel="noopener">LIVE PROJECT ↗</a><a class="projectUrl projectBtn secondaryProjectBtn" href="https://github.com/asgharabdullah847-cmd/opal_auto_detailing" target="_blank" rel="noopener">GITHUB ↗</a></div></div></div>
 <div class="project reveal"><div class="projectVisual"></div><div class="projectContent"><h3>ADD YOUR PROJECT</h3><p>Project title + short description</p><div class="projectUrl">https://github.com/your-project</div></div></div>
 <div class="project reveal"><div class="projectVisual"></div><div class="projectContent"><h3>ADD YOUR PROJECT</h3><p>Project title + short description</p><div class="projectUrl">https://github.com/your-project</div></div></div>
 </div></div></section>
