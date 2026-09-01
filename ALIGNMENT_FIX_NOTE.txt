@@ -1,0 +1,1 @@
+Applied a targeted header/logo alignment CSS patch. It normalizes logo/text vertical alignment and prevents the SOFTWARE ENGINEERING badge from overlapping the brand. Existing design and content were otherwise left unchanged.

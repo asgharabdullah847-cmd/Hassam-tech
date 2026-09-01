@@ -1,0 +1,69 @@
+
+/* Hassam Tech header alignment fix */
+.hassam-tech-brand,
+.brand-logo,
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.hassam-tech-brand {
+  gap: 12px;
+}
+
+.hassam-tech-brand img,
+.brand-logo img,
+.logo-wrapper img {
+  flex-shrink: 0;
+  display: block;
+}
+
+.hassam-tech-brand .brand-text,
+.brand-logo .brand-text,
+.logo-wrapper .brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1;
+}
+
+.hassam-tech-brand .brand-name,
+.brand-logo .brand-name,
+.logo-wrapper .brand-name {
+  line-height: 1.05;
+  margin: 0;
+}
+
+.hassam-tech-brand .brand-subtitle,
+.brand-logo .brand-subtitle,
+.logo-wrapper .brand-subtitle {
+  line-height: 1.15;
+  margin-top: 5px;
+}
+
+.hassam-tech-brand .brand-tagline,
+.brand-logo .brand-tagline,
+.logo-wrapper .brand-tagline {
+  margin-top: 8px;
+  line-height: 1;
+  white-space: nowrap;
+  align-self: flex-start;
+}
+
+/* Prevent the engineering badge from overlapping the brand */
+.hassam-tech-brand + *,
+header .brand + * {
+  box-sizing: border-box;
+}
+
+@media (max-width: 640px) {
+  .hassam-tech-brand {
+    gap: 8px;
+  }
+  .hassam-tech-brand .brand-tagline,
+  .brand-logo .brand-tagline,
+  .logo-wrapper .brand-tagline {
+    margin-top: 6px;
+    font-size: 10px;
+  }
+}

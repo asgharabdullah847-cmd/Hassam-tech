@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HASSAM TECH — Premium Software Agency</title>
+<meta name="description" content="HASSAM TECH — premium software development, AI automation, web, mobile and blockchain solutions.">
+<style>
+:root{--bg:#02040a;--panel:#080c15;--text:#f8f9ff;--muted:#969fb5;--line:#ffffff12;--blue:#3988ff;--violet:#813cff;--cyan:#29d5ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(#ffffff04 1px,transparent 1px),linear-gradient(90deg,#ffffff04 1px,transparent 1px);background-size:70px 70px;mask-image:linear-gradient(to bottom,#000,transparent 85%);z-index:-1}a{text-decoration:none;color:inherit}.wrap{width:min(1180px,92%);margin:auto}
+nav{position:fixed;z-index:50;inset:0 0 auto;background:#02040ad9;backdrop-filter:blur(22px);border-bottom:1px solid var(--line)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:20px;font-weight:950;letter-spacing:2px}.logo em{font-style:normal;color:var(--blue)}.links{display:flex;gap:27px;color:#bfc6d6;font-size:13px}.links a{transition:.25s}.links a:hover{color:#fff}.navbtn,.btn{border:1px solid #3988ff55;border-radius:10px;padding:13px 19px;font-weight:850;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:.35s}.navbtn,.primary{background:linear-gradient(135deg,#2678ff,#7d3cff);box-shadow:0 12px 45px #3988ff20}.btn:hover,.navbtn:hover{transform:translateY(-3px);box-shadow:0 18px 50px #3988ff30}.secondary{background:#ffffff04;border-color:var(--line)}.menu{display:none;background:none;border:1px solid var(--line);color:#fff;padding:9px;border-radius:8px}
+.hero{min-height:900px;padding:155px 0 95px;display:grid;grid-template-columns:1.02fr .98fr;gap:40px;align-items:center;position:relative}.hero:after{content:"";position:absolute;width:550px;height:550px;right:-250px;top:120px;background:radial-gradient(circle,#3988ff25,#813cff12,transparent 65%);filter:blur(20px);z-index:-1}.eyebrow{display:inline-flex;padding:8px 13px;border:1px solid #3988ff55;border-radius:99px;color:#6aa9ff;text-transform:uppercase;font-size:10px;letter-spacing:2px;font-weight:900}.hero h1{font-size:clamp(52px,6.2vw,88px);line-height:.94;letter-spacing:-5px;margin:22px 0 25px}.hero h1 span{background:linear-gradient(90deg,#fff 0%,#62a4ff 48%,#9a58ff 100%);background-clip:text;color:transparent}.hero p{color:var(--muted);font-size:18px;line-height:1.75;max-width:630px;margin:0 0 30px}.actions{display:flex;gap:12px;flex-wrap:wrap}.micro{display:flex;gap:28px;margin-top:40px}.micro b{font-size:22px;display:block}.micro small{color:var(--muted)}
+.heroVisual{height:560px;position:relative;display:grid;place-items:center}.core{width:280px;height:280px;border:1px solid #6da8ff99;transform:rotate(45deg);position:absolute;box-shadow:0 0 100px #3988ff35,inset 0 0 80px #813cff1c;animation:levitate 7s ease-in-out infinite}.core:before,.core:after{content:"";position:absolute;inset:38px;border:1px solid #9b5cff77}.core:after{inset:76px}.halo{position:absolute;width:500px;height:180px;border:1px solid #3988ff66;border-radius:50%;transform:rotate(-23deg);animation:spin 14s linear infinite}.halo.two{transform:rotate(55deg);border-color:#813cff55;animation-direction:reverse}.orb{position:absolute;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,#813cff88,#3988ff25 42%,transparent 70%);filter:blur(18px);animation:breathe 4s ease-in-out infinite}.scan{position:absolute;inset:18%;border:1px solid #ffffff10;border-radius:50%;box-shadow:0 0 80px #3988ff14}
+.videoSection{position:relative;min-height:560px;display:flex;align-items:center;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.bgvideo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.34;filter:saturate(.75) contrast(1.1)}.videoOverlay{position:absolute;inset:0;background:linear-gradient(90deg,#02040af5 0%,#02040ac8 48%,#02040a8c 100%),linear-gradient(0deg,#02040ae8,transparent 45%,#02040ab5)}.videoContent{position:relative;z-index:2;padding:95px 0}.videoContent h2{font-size:clamp(38px,5vw,65px);letter-spacing:-3px;max-width:720px;margin:12px 0}.videoContent p{color:#aeb6c8;max-width:610px;line-height:1.75;font-size:17px}.videoBadge{display:inline-block;color:#62a5ff;border:1px solid #3988ff55;border-radius:99px;padding:7px 11px;font-size:10px;letter-spacing:2px;font-weight:900}
+.section{padding:105px 0}.head{text-align:center;margin-bottom:48px}.kicker{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#5da1ff;font-weight:900}.head h2{font-size:clamp(35px,4vw,55px);letter-spacing:-3px;margin:10px 0}.head p{max-width:680px;margin:auto;color:var(--muted);line-height:1.7}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{min-height:240px;padding:29px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,#ffffff09,#ffffff02);position:relative;overflow:hidden;transition:.4s}.card:after{content:"";position:absolute;width:170px;height:170px;right:-80px;top:-80px;background:#3988ff20;filter:blur(45px)}.card:hover{transform:translateY(-9px) rotateX(2deg);border-color:#3988ff55;box-shadow:0 30px 80px #0008}.icon{width:49px;height:49px;border-radius:14px;display:grid;place-items:center;background:#3988ff12;border:1px solid #3988ff38;margin-bottom:22px;font-size:21px}.card h3{margin:0 0 10px;font-size:20px}.card p{color:var(--muted);line-height:1.7;margin:0}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:17px}.tag{font-size:10px;padding:6px 9px;border:1px solid var(--line);border-radius:99px;color:#aab2c4}
+.ai{position:relative;overflow:hidden}.ai:before{content:"AI";position:absolute;font-size:300px;font-weight:950;color:#ffffff02;right:-30px;top:-60px;line-height:1;pointer-events:none}.aiGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.aiItem{padding:20px;border:1px solid var(--line);border-radius:15px;background:#ffffff04;transition:.3s}.aiItem:hover{border-color:#813cff55;transform:translateX(5px);background:#813cff08}.aiItem b{display:block;margin-bottom:7px}.aiItem span{font-size:13px;color:var(--muted)}
+.projects{background:radial-gradient(circle at 10% 50%,#813cff0e,transparent 25%)}.project{min-height:330px;padding:25px;border:1px solid var(--line);border-radius:19px;position:relative;overflow:hidden;background:#080d18;display:flex;flex-direction:column;justify-content:flex-end;transition:.4s}.project:hover{transform:translateY(-8px);border-color:#3988ff55;box-shadow:0 30px 80px #0009}.projectVisual{position:absolute;inset:0;background:linear-gradient(135deg,#3988ff22,#813cff20,transparent);opacity:.9}.projectVisual:before{content:"";position:absolute;inset:15%;border:1px solid #ffffff0a;transform:rotate(15deg);box-shadow:0 0 90px #3988ff14}.projectContent{position:relative;z-index:2}.project h3{font-size:23px;margin:0 0 7px}.project p{color:var(--muted);line-height:1.65;margin:0 0 13px}.projectUrl{color:#66a7ff;font-size:12px;word-break:break-all}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.step{padding:24px;border-top:1px solid #3988ff66}.step .num{color:#5ba0ff;font-weight:950}.step h3{margin:11px 0 8px}.step p{color:var(--muted);font-size:13px;line-height:1.7}
+.reviewsEmpty{border:1px dashed #ffffff20;border-radius:18px;padding:48px 25px;text-align:center;background:#ffffff02}.reviewsEmpty h3{margin:0 0 8px}.reviewsEmpty p{color:var(--muted);margin:0}.formbox{max-width:660px;margin:30px auto 0;padding:27px;border:1px solid var(--line);border-radius:18px;background:#ffffff03}.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.input,textarea,select{width:100%;background:#050810;color:#fff;border:1px solid var(--line);padding:14px;border-radius:9px;outline:none}.input:focus,textarea:focus,select:focus{border-color:#3988ff66}.full{grid-column:1/-1}textarea{min-height:120px;resize:vertical}
+.contact{padding:110px 0;background:linear-gradient(135deg,#3988ff0e,#813cff0b);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.contactGrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:45px;align-items:start}.contact h2{font-size:clamp(40px,5vw,60px);letter-spacing:-3px;margin:10px 0}.contact p{color:var(--muted);line-height:1.7;max-width:500px}.details{display:grid;gap:10px;margin-top:25px}.detail{padding:15px;border:1px solid var(--line);border-radius:11px;background:#0003}.detail span{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+footer{padding:35px 0;color:#7d8599;border-top:1px solid var(--line)}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.wa{position:fixed;right:21px;bottom:21px;z-index:60;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25d366;color:#fff;font-size:26px;box-shadow:0 12px 40px #25d36655;animation:floatbtn 2.5s ease-in-out infinite}
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s ease}.show{opacity:1;transform:none}
+@keyframes levitate{50%{transform:rotate(45deg) translateY(-22px)}}@keyframes breathe{50%{transform:scale(1.12);opacity:.8}}@keyframes spin{to{transform:rotate(337deg)}}@keyframes floatbtn{50%{transform:translateY(-7px)}}
+@media(max-width:850px){.links,.navbtn{display:none}.menu{display:block}.hero{grid-template-columns:1fr;padding-top:125px}.heroVisual{height:390px;order:-1}.core{width:185px;height:185px}.halo{width:310px}.grid{grid-template-columns:1fr 1fr}.process{grid-template-columns:1fr 1fr}.contactGrid{grid-template-columns:1fr}.videoSection{min-height:520px}}
+@media(max-width:560px){.hero h1{font-size:45px;letter-spacing:-2.5px}.hero p{font-size:16px}.heroVisual{height:300px}.core{width:140px;height:140px}.halo{width:240px}.grid,.aiGrid,.process,.fields{grid-template-columns:1fr}.section{padding:75px 0}.head h2{font-size:36px}.videoContent h2{font-size:40px}.full{grid-column:auto}.micro{gap:17px}}
+
+/* LUXURY V3 MOTION SYSTEM */
+.theme{background:#ffffff08;border:1px solid #ffffff18;color:#fff;width:39px;height:39px;border-radius:50%;cursor:pointer;font-size:17px;margin-left:auto;margin-right:10px;transition:.35s}.theme:hover{transform:rotate(25deg) scale(1.08);border-color:#66a7ff88}
+.codeRain{position:absolute;z-index:1;right:5%;top:12%;width:min(520px,44vw);height:76%;overflow:hidden;padding:25px 28px;border:1px solid #5da1ff2e;border-radius:18px;background:linear-gradient(135deg,#02050bdd,#071329bb);color:#77adff;font:13px/2.05 ui-monospace,SFMono-Regular,Menlo,monospace;box-shadow:0 0 80px #3988ff18,inset 0 0 50px #3988ff0a;opacity:.86;animation:codeFloat 6s ease-in-out infinite}.codeRain:before{content:"●  ●  ●";display:block;color:#ffffff30;letter-spacing:7px;border-bottom:1px solid #ffffff10;margin-bottom:15px}.codeRain span{color:#d783ff}.codeRain b{color:#55d6ff}.codeRain i{color:#78ffb0;font-style:normal}.codeRain em{color:#ffcc75;font-style:normal}.codeRain:after{content:"";position:absolute;left:0;right:0;height:90px;top:-90px;background:linear-gradient(transparent,#54a5ff28,transparent);animation:scanCode 3.4s linear infinite}
+.robotScene{position:absolute;z-index:1;right:7%;top:50%;transform:translateY(-50%);width:510px;height:470px;pointer-events:none}.robotGlow{position:absolute;width:430px;height:430px;border-radius:50%;left:40px;top:10px;background:radial-gradient(circle,#7c3cff45,#2488ff18 40%,transparent 70%);filter:blur(12px);animation:robotPulse 4s ease-in-out infinite}.robot{position:absolute;left:145px;top:75px;width:215px;height:310px;filter:drop-shadow(0 0 25px #3988ff55);animation:robotFloat 5s ease-in-out infinite}.robotHead{position:absolute;left:35px;top:0;width:145px;height:105px;border:2px solid #71aaffaa;border-radius:35px 35px 28px 28px;background:linear-gradient(145deg,#162a4c,#050914);box-shadow:inset 0 0 35px #3988ff28,0 0 35px #3988ff22;display:flex;align-items:center;justify-content:center;gap:30px}.eye{width:23px;height:12px;border-radius:50%;background:#55dfff;box-shadow:0 0 16px #55dfff;animation:blink 4s infinite}.antenna{position:absolute;width:3px;height:40px;background:#69b5ff;left:106px;top:-38px}.antenna:after{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:#9c5cff;left:-3px;top:-5px;box-shadow:0 0 20px #9c5cff;animation:blink 1.4s infinite}.robotBody{position:absolute;left:25px;top:112px;width:165px;height:165px;border:2px solid #638ed0aa;border-radius:28px;background:linear-gradient(145deg,#0d1a31,#04070d);box-shadow:inset 0 0 45px #3988ff20}.coreDot{position:absolute;left:62px;top:47px;width:40px;height:40px;border-radius:50%;border:2px solid #7d5cff;background:#3988ff30;box-shadow:0 0 30px #3988ff;animation:coreSpin 2s linear infinite}.circuit{position:absolute;height:2px;background:#48cfff;box-shadow:0 0 9px #48cfff;opacity:.7}.c1{width:55px;left:10px;top:35px}.c2{width:65px;right:8px;bottom:32px;background:#9a55ff}.arm{position:absolute;top:130px;width:55px;height:125px;border:9px solid #152d50;border-radius:30px;box-shadow:0 0 15px #3988ff22}.arm.left{left:-15px;transform:rotate(12deg)}.arm.right{right:-15px;transform:rotate(-12deg)}.floatCard{position:absolute;padding:12px 15px;border:1px solid #ffffff18;border-radius:12px;background:#050914cc;backdrop-filter:blur(12px);color:#aeb9cc;font-size:10px;letter-spacing:1px;box-shadow:0 15px 45px #0008;animation:cardFloat 4s ease-in-out infinite}.floatCard b{display:block;color:#6dceff;font-size:11px;margin-top:4px}.fc1{left:20px;top:105px}.fc2{right:0;bottom:90px;animation-delay:-1.5s}
+/* disabled light mode: .light{--bg:#f5f7fb;--panel:#fff;--text:#111827;--muted:#596273;--line:#11182718}.light nav{background:#ffffffdc}.light .theme{color:#111;background:#00000008}.light .card,.light .project,.light .formbox,.light .reviewsEmpty{background:#ffffffcc}.light .videoOverlay{background:linear-gradient(90deg,#f5f7fbee 0%,#f5f7fbd2 48%,#f5f7fb88 100%),linear-gradient(0deg,#f5f7fbe8,transparent 45%,#f5f7fbb5)}.light .codeRain{background:#ffffffdf;color:#315f9e;border-color:#315f9e22}.light .detail,.light .aiItem{background:#fff}.light footer{color:#667085}
+@keyframes codeFloat{50%{transform:translateY(-10px)}}@keyframes scanCode{to{top:100%}}@keyframes robotFloat{50%{transform:translateY(-16px) rotateY(5deg)}}@keyframes robotPulse{50%{transform:scale(1.12);opacity:.75}}@keyframes blink{0%,45%,50%,100%{opacity:1}47%{opacity:.1}}@keyframes coreSpin{to{transform:rotate(360deg)}}@keyframes cardFloat{50%{transform:translateY(-12px)}}
+@media(max-width:850px){.codeRain{right:3%;width:48%;opacity:.55}.robotScene{right:-5%;transform:translateY(-50%) scale(.82);opacity:.7}}
+@media(max-width:600px){.codeRain{left:5%;right:5%;width:auto;top:8%;height:55%;opacity:.42;font-size:10px}.heroVisual{margin-top:-10px}.robotScene{right:-28%;transform:translateY(-50%) scale(.62);opacity:.45}.videoContent{padding-top:190px}.videoSection{min-height:620px}}
+
+/* V4 precision branding + brighter code treatment */
+.brandLogo{display:flex;align-items:center;text-decoration:none;min-width:170px;height:52px;overflow:hidden}
+.brandLogo img{height:49px;width:auto;display:block;object-fit:contain;filter:drop-shadow(0 0 12px rgba(50,155,255,.22))}
+.codeBrandMark{position:absolute;z-index:3;left:5%;top:10%;display:flex;align-items:center;gap:12px;pointer-events:none}
+.codeBrandMark img{width:62px;height:62px;object-fit:cover;border-radius:50%;box-shadow:0 0 28px rgba(50,155,255,.55);border:1px solid rgba(255,255,255,.16)}
+.codeBrandMark span{font-size:13px;line-height:1.2;font-weight:800;letter-spacing:1.8px;color:#f4f7ff;text-shadow:0 0 18px rgba(65,158,255,.35)}
+.codeBrandMark small{font-size:8px;letter-spacing:2.2px;color:#79b7ff;font-weight:600}
+.codeRain{right:4%;top:16%;width:min(600px,49vw);height:70%;opacity:1!important;background:
+linear-gradient(135deg,rgba(2,8,20,.96),rgba(6,20,43,.92)),
+repeating-linear-gradient(90deg,rgba(77,160,255,.05) 0 1px,transparent 1px 44px);
+border:1px solid rgba(79,164,255,.38)!important;
+box-shadow:0 0 110px rgba(40,125,255,.18),inset 0 0 70px rgba(43,127,255,.12),0 0 0 1px rgba(255,255,255,.03);
+text-shadow:0 0 12px rgba(72,174,255,.25)}
+.codeRain:before{color:#6caeff!important;border-bottom-color:rgba(108,174,255,.22)!important}
+.codeRain:after{background:linear-gradient(transparent,rgba(83,184,255,.38),transparent)!important;height:130px;animation-duration:2.4s!important}
+.codeRain span{color:#d69aff!important;text-shadow:0 0 9px rgba(214,154,255,.55)}
+.codeRain b{color:#5ee9ff!important;text-shadow:0 0 10px rgba(94,233,255,.55)}
+.codeRain i{color:#8dffbf!important;text-shadow:0 0 10px rgba(141,255,191,.45)}
+.codeRain em{color:#ffd479!important}
+.heroVisual{position:relative;z-index:2}
+@media(max-width:850px){
+ .brandLogo{min-width:130px;height:46px}.brandLogo img{height:43px}
+ .codeBrandMark{left:5%;top:7%}.codeBrandMark img{width:48px;height:48px}
+ .codeBrandMark span{font-size:10px}.codeBrandMark small{font-size:6px}
+ .codeRain{left:5%;right:5%;width:auto;top:14%;height:62%;opacity:.9!important}
+}
+@media(max-width:600px){
+ .codeBrandMark{top:5%}.codeRain{top:15%;height:54%;font-size:9px;line-height:1.8}
+}
+body{background:#03050a;color:#f5f7ff}.theme{display:none!important}\n
+/* ===== PIXEL PERFECT HASSAM TECH BRAND ALIGNMENT ===== */
+.brandLogo{
+  display:flex!important;
+  align-items:center!important;
+  gap:11px!important;
+  min-width:0!important;
+  width:auto!important;
+  height:54px!important;
+  overflow:visible!important;
+}
+.brandLogo > img{
+  width:52px!important;
+  height:52px!important;
+  flex:0 0 52px!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  border-radius:50%!important;
+  display:block!important;
+  filter:drop-shadow(0 0 14px rgba(50,155,255,.32))!important;
+}
+.navBrandText{
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+  gap:4px!important;
+  line-height:1!important;
+  white-space:nowrap!important;
+}
+.navBrandText strong{
+  font-size:15px!important;
+  font-weight:950!important;
+  letter-spacing:1.8px!important;
+  color:#f5f7ff!important;
+}
+.navBrandText small{
+  font-size:8px!important;
+  font-weight:750!important;
+  letter-spacing:2.7px!important;
+  color:#59a9ff!important;
+}
+
+.codeBrandMark{
+  left:4%!important;
+  top:8%!important;
+  gap:13px!important;
+  align-items:center!important;
+  padding:0!important;
+}
+.codeBrandMark img{
+  width:72px!important;
+  height:72px!important;
+  flex:0 0 72px!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  border-radius:50%!important;
+  display:block!important;
+  box-shadow:0 0 32px rgba(50,155,255,.58)!important;
+}
+.codeBrandMark span{
+  display:flex!important;
+  flex-direction:column!important;
+  gap:6px!important;
+  line-height:1!important;
+  white-space:nowrap!important;
+}
+.codeBrandMark span strong{
+  font-size:17px!important;
+  line-height:1!important;
+  font-weight:950!important;
+  letter-spacing:2.2px!important;
+  color:#f7f9ff!important;
+  text-shadow:0 0 18px rgba(65,158,255,.35)!important;
+}
+.codeBrandMark span small{
+  font-size:9px!important;
+  line-height:1!important;
+  letter-spacing:3px!important;
+  color:#62b1ff!important;
+  font-weight:750!important;
+}
+
+/* Keep the software engineering badge visually independent */
+.videoContent{
+  padding-top:145px!important;
+}
+.videoBadge{
+  position:relative!important;
+  z-index:4!important;
+}
+
+@media(max-width:850px){
+  .brandLogo{height:46px!important;gap:8px!important}
+  .brandLogo > img{width:43px!important;height:43px!important;flex-basis:43px!important}
+  .navBrandText strong{font-size:12px!important;letter-spacing:1.4px!important}
+  .navBrandText small{font-size:6px!important;letter-spacing:2px!important}
+  .codeBrandMark{left:5%!important;top:7%!important;gap:9px!important}
+  .codeBrandMark img{width:52px!important;height:52px!important;flex-basis:52px!important}
+  .codeBrandMark span strong{font-size:12px!important;letter-spacing:1.6px!important}
+  .codeBrandMark span small{font-size:7px!important;letter-spacing:2.2px!important}
+}
+@media(max-width:600px){
+  .codeBrandMark{top:5%!important}
+  .videoContent{padding-top:125px!important}
+}
+
+
+/* ================= REVIEWS — PREMIUM AUTO SCROLL ================= */
+.reviews-section{
+  position:relative;
+  overflow:hidden;
+  padding:110px 0 100px;
+  background:
+    radial-gradient(circle at 15% 25%, rgba(36,140,255,.10), transparent 28%),
+    radial-gradient(circle at 85% 75%, rgba(0,212,255,.07), transparent 25%),
+    #05070b;
+  border-top:1px solid rgba(255,255,255,.07);
+}
+.reviews-heading{
+  text-align:center;
+  margin:0 auto 42px;
+  padding:0 20px;
+}
+.reviews-heading .section-kicker{
+  display:inline-block;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:3px;
+  color:#5caeff;
+  margin-bottom:12px;
+}
+.reviews-heading h2{
+  margin:0;
+  font-size:clamp(30px,4vw,52px);
+  line-height:1;
+  font-weight:950;
+  letter-spacing:-1.5px;
+  color:#fff;
+}
+.reviews-heading h2 span{
+  background:linear-gradient(90deg,#fff,#58aaff);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.reviews-heading p{
+  margin:14px 0 0;
+  color:rgba(255,255,255,.58);
+  font-size:14px;
+}
+.reviews-viewport{
+  width:100%;
+  overflow:hidden;
+  mask-image:linear-gradient(to right,transparent 0%,#000 7%,#000 93%,transparent 100%);
+  -webkit-mask-image:linear-gradient(to right,transparent 0%,#000 7%,#000 93%,transparent 100%);
+}
+.reviews-track{
+  display:flex;
+  width:max-content;
+  gap:22px;
+  padding:10px 0 25px;
+  animation:reviewsAutoScroll 42s linear infinite;
+  will-change:transform;
+}
+.reviews-track:hover{animation-play-state:paused}
+.review-card{
+  width:310px;
+  min-width:310px;
+  height:410px;
+  padding:10px;
+  border-radius:22px;
+  background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.035));
+  border:1px solid rgba(105,180,255,.20);
+  box-shadow:0 18px 55px rgba(0,0,0,.42), inset 0 1px 0 rgba(255,255,255,.08);
+  backdrop-filter:blur(12px);
+  overflow:hidden;
+  transition:transform .4s ease,border-color .4s ease,box-shadow .4s ease;
+}
+.review-card:hover{
+  transform:translateY(-9px);
+  border-color:rgba(83,170,255,.65);
+  box-shadow:0 25px 70px rgba(0,120,255,.18),0 20px 55px rgba(0,0,0,.45);
+}
+.review-card img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  border-radius:15px;
+}
+.review-caption{
+  display:none;
+}
+.review-placeholder{
+  height:100%;
+  border:1px dashed rgba(110,185,255,.32);
+  border-radius:15px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:30px;
+  color:#fff;
+  background:linear-gradient(160deg,rgba(35,120,220,.08),rgba(255,255,255,.015));
+}
+.placeholder-icon{
+  width:58px;height:58px;border-radius:50%;
+  display:grid;place-items:center;
+  font-size:30px;color:#66b2ff;
+  border:1px solid rgba(102,178,255,.4);
+  margin-bottom:18px;
+}
+.review-placeholder strong{
+  font-size:12px;letter-spacing:2px;
+}
+.review-placeholder span{
+  margin-top:10px;
+  color:rgba(255,255,255,.48);
+  font-size:11px;line-height:1.7;
+}
+.reviews-controls{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:15px;
+  margin-top:25px;
+}
+.review-arrow{
+  width:40px;height:40px;border-radius:50%;
+  border:1px solid rgba(100,180,255,.28);
+  background:rgba(255,255,255,.04);
+  color:#fff;font-size:25px;line-height:1;
+  cursor:pointer;
+  transition:.25s ease;
+}
+.review-arrow:hover{
+  background:rgba(60,155,255,.16);
+  border-color:#55aaff;
+}
+.review-dots{display:flex;gap:7px}
+.review-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:rgba(255,255,255,.2);
+}
+.review-dot.active{background:#5eafff;box-shadow:0 0 12px #5eafff}
+@keyframes reviewsAutoScroll{
+  from{transform:translateX(0)}
+  to{transform:translateX(calc(-50% - 11px))}
+}
+@media(max-width:700px){
+  .reviews-section{padding:80px 0 75px}
+  .review-card{width:275px;min-width:275px;height:365px}
+  .reviews-track{gap:16px;animation-duration:34s}
+}
+
+</style>
+</head>
+<body>
+<nav><div class="wrap nav"><a class="brandLogo" href="#home">
+<img src="assets/hassam-tech-icon.png" alt="Hassam Tech">
+<span class="navBrandText"><strong>HASSAM TECH</strong><small>SOFTWARE COMPANY</small></span>
+</a><div class="links"><a href="#services">Services</a><a href="#ai">AI</a><a href="#projects">Projects</a><a href="#process">Process</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></div><a class="navbtn" href="#contact"> →</a><button class="menu">☰</button></div></nav>
+
+<section class="wrap hero" id="home"><div class="reveal"><div class="eyebrow">Premium Software Engineering</div><h1>Digital Products Built To <span>Stand Apart.</span></h1><p>HASSAM TECH creates high-performance websites, applications, AI automation and Web3 solutions with a premium product-first approach.</p><div class="actions"><a class="btn primary" href="#projects">View Projects →</a><a class="btn secondary" href="#contact">Start A Project</a></div><div class="micro"><div><b>Web</b><small>Engineering</small></div><div><b>AI</b><small>Automation</small></div><div><b>Web3</b><small>Solutions</small></div></div></div><div class="heroVisual reveal"><div class="orb"></div><div class="halo"></div><div class="halo two"></div><div class="scan"></div><div class="core"></div></div></section>
+
+<section class="videoSection" id="coding"><video class="bgvideo" autoplay muted loop playsinline poster="https://images.pexels.com/photos/6424584/pexels-photo-6424584.jpeg"><source src="https://videos.pexels.com/video-files/33187808/14143396_3840_2160_25fps.mp4" type="video/mp4"></video>
+
+<div class="codeBrandMark" aria-hidden="true">
+  <img src="assets/hassam-tech-icon.png" alt="">
+  <span><strong>HASSAM TECH</strong><small>SOFTWARE COMPANY</small></span>
+</div>
+<div class="codeRain" aria-hidden="true"><span>const</span> buildProduct = <b>async</b> () =&gt; {<br>&nbsp;&nbsp;await api.deploy();<br>&nbsp;&nbsp;return <i>success</i>;<br>}<br><br>import { AI, Cloud, Data } from <em>"@hassam/core"</em>;<br><br>function automate(workflow) {<br>&nbsp;&nbsp;return AI.optimize(workflow);<br>}</div><div class="videoOverlay"></div><div class="wrap videoContent reveal"><span class="videoBadge">01 / SOFTWARE ENGINEERING</span><h2>Code That Turns Ideas Into Real Products</h2><p>Modern engineering, clean architecture and scalable systems built around the way your business actually works.</p><a class="btn primary" href="#contact">Build With Us →</a></div></section>
+
+<section class="section" id="services"><div class="wrap"><div class="head reveal"><div class="kicker">Capabilities</div><h2>Premium Digital Engineering</h2><p>From the first interface to production infrastructure, every layer is built to feel polished and perform.</p></div><div class="grid">
+<article class="card reveal"><div class="icon">⌘</div><h3>Website Development</h3><p>High-performance marketing sites, portals and web applications with modern UI/UX.</p><div class="tags"><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Node.js</span></div></article>
+<article class="card reveal"><div class="icon">▣</div><h3>App Development</h3><p>Cross-platform mobile experiences designed for speed, usability and scale.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">React Native</span></div></article>
+<article class="card reveal"><div class="icon">✦</div><h3>AI Automation</h3><p>AI agents, chatbots, voice systems and workflows that remove repetitive operations.</p><div class="tags"><span class="tag">LLM</span><span class="tag">Agents</span><span class="tag">Automation</span></div></article>
+<article class="card reveal"><div class="icon">◈</div><h3>Blockchain Development</h3><p>Smart contracts and Web3 products built with secure, production-ready architecture.</p><div class="tags"><span class="tag">Solidity</span><span class="tag">Web3</span></div></article>
+<article class="card reveal"><div class="icon">AI</div><h3>AI Product Development</h3><p>AI-powered SaaS products, knowledge systems and intelligent customer experiences.</p><div class="tags"><span class="tag">GPT</span><span class="tag">Claude</span><span class="tag">RAG</span></div></article>
+<article class="card reveal"><div class="icon">⚡</div><h3>Automation & Integrations</h3><p>Connect your tools, data and workflows into one efficient digital operating system.</p><div class="tags"><span class="tag">APIs</span><span class="tag">Make</span><span class="tag">Zapier</span></div></article>
+</div></div></section>
+
+<section class="videoSection" id="ai"><video class="bgvideo" autoplay muted loop playsinline poster="https://cdn.pixabay.com/photo/2023/07/22/10/12/ai-generated-8142994_1280.jpg"><source src="https://cdn.pixabay.com/video/2025/03/23/266918_large.mp4" type="video/mp4"></video><div class="robotScene" aria-hidden="true"><div class="robotGlow"></div><div class="robot"><div class="antenna"></div><div class="robotHead"><div class="eye"></div><div class="eye"></div></div><div class="robotBody"><div class="coreDot"></div><div class="circuit c1"></div><div class="circuit c2"></div></div><div class="arm left"></div><div class="arm right"></div></div><div class="floatCard fc1">AI AGENT <b>ONLINE</b></div><div class="floatCard fc2">VOICE + CHAT <b>ACTIVE</b></div></div><div class="videoOverlay"></div><div class="wrap videoContent reveal"><span class="videoBadge">02 / AI AUTOMATION</span><h2>Intelligent Systems That Keep Working</h2><p>Automate customer support, voice calls, internal workflows and data-heavy operations with practical AI systems.</p><a class="btn primary" href="#contact">Automate Your Business →</a></div></section>
+
+<section class="section"><div class="wrap"><div class="head reveal"><div class="kicker">AI Intelligence</div><h2>Built Around Your Workflow</h2><p>Purpose-built AI systems rather than generic tools.</p></div><div class="aiGrid">
+<div class="aiItem reveal"><b>AI Chatbots & Virtual Assistants</b><span>Conversational experiences tailored to your business.</span></div><div class="aiItem reveal"><b>AI Voice Agents</b><span>Automate calls, qualification and customer interactions.</span></div><div class="aiItem reveal"><b>Document Processing</b><span>Extract useful information from unstructured documents.</span></div><div class="aiItem reveal"><b>Predictive Analytics</b><span>Use your data to forecast and optimize decisions.</span></div><div class="aiItem reveal"><b>RAG & Knowledge Bases</b><span>Ground AI answers in your own trusted information.</span></div><div class="aiItem reveal"><b>AI Integrations</b><span>Connect intelligent capabilities to your existing systems.</span></div>
+</div></div></section>
+
+<section class="section projects" id="projects"><div class="wrap"><div class="head reveal"><div class="kicker">Your Work</div><h2>Projects & Case Studies</h2><p>No fake projects. Add your real GitHub or live project URL below and replace each placeholder card with your actual work.</p></div><div class="grid">
+<div class="project reveal"><div class="projectVisual"></div><div class="projectContent"><h3>ADD YOUR PROJECT</h3><p>Project title + short description</p><div class="projectUrl">https://github.com/your-project</div></div></div>
+<div class="project reveal"><div class="projectVisual"></div><div class="projectContent"><h3>ADD YOUR PROJECT</h3><p>Project title + short description</p><div class="projectUrl">https://github.com/your-project</div></div></div>
+<div class="project reveal"><div class="projectVisual"></div><div class="projectContent"><h3>ADD YOUR PROJECT</h3><p>Project title + short description</p><div class="projectUrl">https://github.com/your-project</div></div></div>
+</div></div></section>
+
+<section class="section" id="process"><div class="wrap"><div class="head reveal"><div class="kicker">Process</div><h2>From Concept To Launch</h2><p>A focused workflow designed to keep communication clear and delivery predictable.</p></div><div class="process">
+<div class="step reveal"><div class="num">01</div><h3>Discovery</h3><p>Goals, audience, scope and technical requirements.</p></div><div class="step reveal"><div class="num">02</div><h3>Planning</h3><p>Roadmap, milestones, architecture and technology decisions.</p></div><div class="step reveal"><div class="num">03</div><h3>Development</h3><p>Iterative implementation with regular progress and testing.</p></div><div class="step reveal"><div class="num">04</div><h3>Launch</h3><p>Deployment, handover and post-launch support.</p></div>
+</div></div></section>
+
+<section class="section" id="reviews"><div class="wrap"><div class="head reveal"><div class="kicker">Client Feedback</div><h2>Reviews</h2><p>Only genuine client feedback belongs here. Nothing has been fabricated.</p></div><div class="reviewsEmpty reveal"><h3>No reviews added yet</h3><p>Client reviews will appear here after you approve and add them.</p></div><div class="formbox reveal"><h3>Leave a Review</h3><form action="https://formsubmit.co/asgharabdullah847@gmail.com" method="POST"><input type="hidden" name="_subject" value="New HASSAM TECH Client Review"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table"><div class="fields"><input class="input" name="name" placeholder="Your Name" required><input class="input" name="email" type="email" placeholder="Your Email" required><select class="input full" name="rating" required><option value="">Rating</option><option>5/5</option><option>4/5</option><option>3/5</option><option>2/5</option><option>1/5</option></select><textarea class="full" name="review" placeholder="Write your review..." required></textarea><button class="btn primary full" type="submit">Submit Review →</button></div></form></div></div></section>
+
+<section class="contact" id="contact"><div class="wrap contactGrid"><div class="reveal"><div class="kicker">Start Something Great</div><h2>Let's Build Something Exceptional</h2><p>Tell us what you're building and we'll turn the idea into a clear technical plan.</p><div class="details"><div class="detail"><span>Phone</span>+923045091144</div><div class="detail"><span>Email</span>asgharabdullah847@gmail.com</div><div class="detail"><span>Founder</span>Abdullah Asghar</div></div></div><div class="formbox reveal" style="margin:0"><form action="https://formsubmit.co/asgharabdullah847@gmail.com" method="POST"><input type="hidden" name="_subject" value="New HASSAM TECH Project Inquiry"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table"><div class="fields"><input class="input" name="name" placeholder="Your Name" required><input class="input" name="email" type="email" placeholder="Email Address" required><select class="input full" name="service" required><option value="">Service Needed</option><option>Website Development</option><option>App Development</option><option>AI Automation</option><option>Blockchain Development</option><option>AI Product Development</option><option>Automation & Integrations</option></select><textarea class="full" name="details" placeholder="Project Details" required></textarea><button class="btn primary full" type="submit">Send Project Inquiry →</button></div></form></div></div></section>
+<footer><div class="wrap foot"><span>© 2026 HASSAM TECH</span><span>Software • AI • Web3 • Automation</span></div></footer>
+<a class="wa" href="https://wa.me/923045091144" target="_blank" rel="noopener">◔</a>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('show')),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
+themeBtn.addEventListener('click',()=>{document.body.classList.toggle('light');const light=document.body.classList.contains('light');localStorage.setItem('hassam-theme',light?'light':'dark');themeBtn.textContent=light?'☾':'☼'});
+</script>
+
+<script>
+(function(){
+  const track = document.getElementById('reviewsTrack');
+  if(!track) return;
+  const prev = document.getElementById('reviewPrev');
+  const next = document.getElementById('reviewNext');
+  const dots = document.getElementById('reviewDots');
+
+  function cards(){ return [...track.querySelectorAll('.review-card')]; }
+  function move(dir){
+    const card = cards()[0];
+    if(!card) return;
+    track.style.animationPlayState = 'paused';
+    track.scrollLeft += dir * (card.offsetWidth + 22);
+  }
+  if(prev) prev.addEventListener('click',()=>move(-1));
+  if(next) next.addEventListener('click',()=>move(1));
+
+  // Pause auto-scroll while the user touches/holds the review area
+  track.addEventListener('touchstart',()=>track.style.animationPlayState='paused',{passive:true});
+  track.addEventListener('touchend',()=>setTimeout(()=>track.style.animationPlayState='running',1800),{passive:true});
+
+  // Keep the controls visually useful without inventing review data
+  if(dots){
+    const count = Math.min(cards().length, 8);
+    for(let i=0;i<count;i++){
+      const d=document.createElement('span');
+      d.className='review-dot'+(i===0?' active':'');
+      dots.appendChild(d);
+    }
+  }
+})();
+</script>
+
+</body>
+</html>
